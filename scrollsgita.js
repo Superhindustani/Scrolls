@@ -7,6 +7,8 @@ const timeElem = phoneElem.querySelector('.time')
 const contentElem = phoneElem.querySelector('.content')
 const articles = contentElem.querySelectorAll('article')
 
+console.log(articles)
+
 setTime(timeElem)
 setInterval(() => setTime(timeElem), 5000)
 
