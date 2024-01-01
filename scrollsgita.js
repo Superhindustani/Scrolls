@@ -5,9 +5,7 @@ registerPlugin(ScrollTrigger)
 const phoneElem = document.querySelector('#phone')
 const timeElem = phoneElem.querySelector('.time')
 const contentElem = phoneElem.querySelector('.content')
-const articles = contentElem.querySelectorAll('article')
-
-console.log(articles)
+    const articles = contentElem.querySelectorAll('.scrollsgita')
 
 setTime(timeElem)
 setInterval(() => setTime(timeElem), 5000)
@@ -43,9 +41,9 @@ function roll(content, article, articles, index) {
             article.style.overflow = 'visible'
         }
     }, 0).to(article, {
-        '--article-r': getComputedStyle(article).getPropertyValue('--to-article-r'),
-        '--article-x': getComputedStyle(article).getPropertyValue('--to-article-x'),
-        '--article-y': getComputedStyle(article).getPropertyValue('--to-article-y'),
+        '--div-r': getComputedStyle(article).getPropertyValue('--to-div-r'),
+        '--div-x': getComputedStyle(article).getPropertyValue('--to-div-x'),
+        '--div-y': getComputedStyle(article).getPropertyValue('--to-div-y'),
         duration: .15
     })
 
@@ -58,20 +56,20 @@ function roll(content, article, articles, index) {
 
     if(index === 1) {
         animation.to(articles[index - 1], {
-            '--article-y': '-64px',
-            '--article-r': '-2deg',
+            '--div-y': '-64px',
+            '--div-r': '-2deg',
             duration: .15
         }, 1.08)
     }
 
     if(index === 2) {
         animation.to(articles[index - 2], {
-            '--article-y': '-70px',
+            '--div-y': '-70px',
             duration: .15
         }, 1.14)
         animation.to(articles[index - 1], {
-            '--article-y': '-42px',
-            '--article-r': '-2deg',
+            '--div-y': '-42px',
+            '--div-r': '-2deg',
             duration: .15
         }, 1.08)
     }
